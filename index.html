@@ -12,7 +12,8 @@
 body, html {
   height: 100%;
   font-family: 'IBM Plex Mono', monospace;
-font-family: 'Righteous', cursive;
+  font-family: 'Righteous', cursive;
+  scroll-behavior: smooth;
 
 }
 
@@ -75,19 +76,33 @@ font-family: 'Righteous', cursive;
   padding-top: 102px;
 }
 
+.thumb{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
 </style>
 </head>
 <body>
 
     <header class="text-gray-600 body-font bg-black sticky">
-        <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
+        <div class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center" id="home">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               <img src="logo.png"class="w-14 h-14 p-2 rounded-full" viewBox="0 0 24 24"></img>
           
             <span class="ml-3 text-xl" style="color: white;letter-spacing: 2px;">Daniel Šlosár</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-white">
-            <a class="mr-5 hover:text-gray-500" href="" >ABOUT ME</a>
+            <a class="mr-5 hover:text-gray-500" href="#ft" >ABOUT ME</a>
             <a class="mr-5 hover:text-gray-500" href="commands.html" >PROJECTS</a>
             <a class="mr-5 hover:text-gray-500" href="index.html" >CERTIFICATES</a>
             <a class="mr-5 hover:text-gray-500" href="" >RESUME</a>
@@ -99,6 +114,8 @@ font-family: 'Righteous', cursive;
         </div>
       </header>
 
+<div id="base"></div>
+
 <div class="parallax">
     <!--<div class="centered">DANIEL ŠLOSÁR<p>Eager to learn and grow professionally</p></div>-->
     <div class="hero-text">
@@ -107,19 +124,65 @@ font-family: 'Righteous', cursive;
       </div>
 </div>
 
-<div style="height:1000px;background-color:black;font-size:36px">
+<div style="height:2000px;background-color:black;font-size:36px">
     <section class="py-6 text-gray-100">
         <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
             <h1 class="text-5xl font-bold leading-none text-center">Something about me</h1>
-            <p class="pt-2 pb-8 text-xl font-medium text-center">Eum omnis itaque harum at quae sequi unde similique alias asperiores totam. Ex cumque maxime harum doloremque, tempore nam fugiat aspernatur rerum ipsa unde est modi commodi molestias maiores eveniet eius esse asperiores neque dicta ea quisquam? Excepturi sapiente officiis explicabo ab?</p>
+            <p class="pt-2 pb-8 text-xl font-medium text-center">I am a fast learner who enjoys learning new technical skills. My greatest passion in life is using my technical know-how to benefit other people.</p>
             <button class="px-8 py-3 text-lg font-semibold rounded bg-gray-100 text-gray-900">Learn more</button>
         </div>
     </section>
 
+
+    <section class="py-6 text-gray-100">
+      <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
+        <h1 class="text-5xl leading-none text-center text-white mt-20 mb-12">Certificates</h1>
+        <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/J8GND8RZWK5E">
+          <img src="certificate.png" alt="Paris" style="width:500px" class="thumb">
+        </a>
+        
+        <p class="pt-0 pb-8 text-base font-medium text-center">Coursera - Crash Course on Python</p>
+      </div>
+  </section>
+    
+  <section class="py-6 text-gray-100">
+    <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
+      <h1 class="text-5xl leading-none text-center text-white mt-8 mb-12">RESUME</h1>
+    </div>
+</section>
+
     
 </div>
 
-<div class="parallax"></div>
+<!--<div class="parallax"></div>-->
+
+<div id="ft" style="scroll-behavior: smooth;overflow-y: scroll;"></div>
+
+<footer class="text-gray-100 bg-black body-font">
+  <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+      <img src="logo.png"class="w-14 h-14 p-2 rounded-full" viewBox="0 0 24 24"></img>
+      <a href="#base">
+        <span class="ml-3 text-xl">Daniel Šlosár</span>
+      </a>
+    </a>
+    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2022 Daniel Šlosár</p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start ">
+      <a class="text-gray-100 ml-3" href="https://www.linkedin.com/in/daniel-slosar/">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me">
+        <i class="fas fa-envelope fa-2x"></i>        
+      </a>
+      <a class="ml-3 text-gray-100" href="https://github.com/daniel-slosar">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a class="ml-3 text-gray-100" href="https://www.instagram.com/daniel_slosar/">
+        <i class="fab fa-instagram fa-2x"></i>
+      </a>
+    </span>
+  </div>
+</footer>
 
 </body>
 </html>
