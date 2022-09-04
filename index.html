@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Righteous&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ab14671f9e.js" crossorigin="anonymous"></script>
 <style>
 body, html {
   height: 100%;
@@ -90,6 +89,94 @@ body, html {
 .thumb:hover {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position:relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: white;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+ul li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  ul li div {
+    width: 250px;
+  }
+  ul li:nth-child(even) div {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
 </style>
 </head>
 <body>
@@ -102,9 +189,9 @@ body, html {
             <span class="ml-3 text-xl" style="color: white;letter-spacing: 2px;">Daniel Šlosár</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-white">
-            <a class="mr-5 hover:text-gray-500" href="#ft" >ABOUT ME</a>
-            <a class="mr-5 hover:text-gray-500" href="commands.html" >PROJECTS</a>
-            <a class="mr-5 hover:text-gray-500" href="index.html" >CERTIFICATES</a>
+            <a class="mr-5 hover:text-gray-500" href="#about" >ABOUT ME</a>
+            <a class="mr-5 hover:text-gray-500" href="#projects" >PROJECTS</a>
+            <a class="mr-5 hover:text-gray-500" href="#certificates" >CERTIFICATES</a>
             <a class="mr-5 hover:text-gray-500" href="" >RESUME</a>
           </nav>
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 text-black">
@@ -120,23 +207,38 @@ body, html {
     <!--<div class="centered">DANIEL ŠLOSÁR<p>Eager to learn and grow professionally</p></div>-->
     <div class="hero-text">
         <h1>DANIEL ŠLOSÁR</h1>
-        <p style="letter-spacing:1px;font-size:20px;">Eager to learn and grow professionally</p>
-      </div>
-</div>
-
-<div style="height:2000px;background-color:black;font-size:36px">
-    <section class="py-6 text-gray-100">
+        <p style="letter-spacing:1px;font-size:20px" class="mb-6">Eager to learn and grow professionally</p>
+        <span class="inline-flex">
+          <a class="text-gray-100 ml-3" href="https://www.linkedin.com/in/daniel-slosar/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me">
+            <i class="fas fa-envelope"></i>        
+          </a>
+          <a class="ml-3 text-gray-100" href="https://github.com/daniel-slosar">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="ml-3 text-gray-100" href="https://www.instagram.com/daniel_slosar/">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </span>
+    </div>
+    
+</div>  
+    
+    
+<div style="height:3500px;background-color:black" id="about">
+    <section class="py-14 text-gray-100">
         <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
-            <h1 class="text-5xl font-bold leading-none text-center">Something about me</h1>
-            <p class="pt-2 pb-8 text-xl font-medium text-center">I am a fast learner who enjoys learning new technical skills. My greatest passion in life is using my technical know-how to benefit other people.</p>
-            <button class="px-8 py-3 text-lg font-semibold rounded bg-gray-100 text-gray-900">Learn more</button>
+            <h1 class="text-5xl font-bold leading-none text-center">Something about me..</h1>
+            <p class="pt-2 text-xl font-medium text-center">I am a fast learner who enjoys learning new technical skills. My greatest passion in life is using my technical know-how to benefit other people.</p>
         </div>
     </section>
 
 
-    <section class="py-6 text-gray-100">
+    <section class="py-2 text-gray-100" id="certificates">
       <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
-        <h1 class="text-5xl leading-none text-center text-white mt-20 mb-12">Certificates</h1>
+        <h1 class="text-5xl leading-none text-center text-white mt-10 mb-6">Certificates</h1>
         <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/J8GND8RZWK5E">
           <img src="certificate.png" alt="Paris" style="width:500px" class="thumb">
         </a>
@@ -144,15 +246,159 @@ body, html {
         <p class="pt-0 pb-8 text-base font-medium text-center">Coursera - Crash Course on Python</p>
       </div>
   </section>
-    
-  <section class="py-6 text-gray-100">
-    <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
-      <h1 class="text-5xl leading-none text-center text-white mt-8 mb-12">RESUME</h1>
-    </div>
-</section>
 
-    
+  
+  <!--
+  <section class="py-6 text-white">
+    <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
+      <h1 class="text-5xl leading-none text-center text-white mt-8 ">RESUME</h1>
+    </div>
+
+    <section class="text-white body-font">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex relative pt-8 pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Shooting Stars</h2>
+              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The Catalyzer</h2>
+              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                <circle cx="12" cy="5" r="3"></circle>
+                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+              </svg>
+            </div>
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The 400 Blows</h2>
+              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+          <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+          <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+          <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+            <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+              <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Neptune</h2>
+              <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+-->
+<h1 class="text-2xl leading-none text-center text-white">Education</h1>
+<div>
+  <ul>
+    <li>
+      <div class="bg-gray-900 text-xl">
+        <time style="color: white;">2022 - Present</time>
+        <img src="matfyz.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
+        <p style="color: white;">Faculty of Mathematics, Physics and Informatics</p>
+        <p style="color: white;">Field of study: Data Science</p>
+        <p style="color: white;">University: Comenius University Bratislava</p>
+      </div>
+    </li>
+    <li>
+      <div class="bg-gray-900 text-xl">
+        <time style="color: white;">2018 - 2022</time>
+        <img src="spse.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
+        <p style="color: white;">Secondary school of electrotechnical engineering</p>
+        <p style="color: white;">Field of study: Computer Systems</p>
+        <p style="color: white;">Location: Prešov, Slovak Republic</p>
+      </div>
+    </li> 
 </div>
+    
+<h1 class="text-2xl leading-none text-center text-white">Work Experience</h1>
+<div>
+  <ul>
+    <li>
+      <div class="bg-gray-900 text-xl">
+        <time style="color: white;">July 2022 - Present</time>
+        <img src="accenture.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
+        <p style="color: white;">Role: IT Support Engineer</p>
+        <p style="color: white;">Company: Accenture s.r.o.</p>
+        <p style="color: white;">Job Description: Recognition of technical problems, proactive
+          resolution of inquiries and customer problems<br>
+          Creating scripting tools for automation tasks<br>
+          Helping team members deliver services
+          defined in OLA<br>
+          Tracking and maintaining the asset inventory
+          database<br>
+          Conducting periodic audits to ensure
+          accuracy of the asset inventory database</p>
+      </div>
+    </li>
+    <li>
+      <div class="bg-gray-900 text-xl">
+        <img src="comap.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
+        <time style="color: white;">October 2022 - May 2022</time>
+        <p style="color: white;">Role: Analyst/Tester</p>
+        <p style="color: white;">Company: ComAp s.r.o.</p>
+        <p style="color: white;">Location: Košice, Slovak Republic</p>
+        <p style="color: white;">Job Description: Collaboration on the CAN recorder project, which
+          records data communication on the CAN line
+          onto the external memory and displays it in
+          graphic form on a progressive web application.
+          Project analysis, creating technical
+          documentation, PWA development, creating Test
+          Cases and project testing.</p>
+          <br>
+          <p style="color: white;" class="pb-2">Skills acquired: </p>
+        <i class="fab fa-python fa-xl ml-1" title="Python" style="color:white"></i>
+        <i class="fa-brands fa-jira fa-xl ml-1" title="Jira" style="color:white"></i>
+        <i class="fa-brands fa-confluence fa-xl ml-1" style="color:white"></i>
+        <i class="fa-brands fa-bitbucket fa-xl ml-1" style="color:white"></i>
+      </div>
+
+    </li> 
+</div>
+</div>
+
 
 <!--<div class="parallax"></div>-->
 
@@ -206,4 +452,34 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+</script>
+
+
+<script>
+  
+var items = document.querySelectorAll("li");
+
+function isItemInView(item){
+  var rect = item.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isItemInView(items[i])) {
+        items[i].classList.add("show");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
 </script>
