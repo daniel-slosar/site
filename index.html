@@ -7,6 +7,7 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Righteous&display=swap" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/ab14671f9e.js" crossorigin="anonymous"></script>
 <style>
@@ -179,6 +180,28 @@ ul li.show div {
     /*250+45-6*/
   }
 }
+
+/************
+TAG CLOUD
+************/
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 15px 15px;
+  font-size: 1em;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.tag:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -226,7 +249,7 @@ ul li.show div {
 </div>  
     
     
-<div style="height:3500px;background-color:black" id="about">
+<div style="height:3400px;background-color:black" id="about">
     <section class="py-14 text-gray-100">
         <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
             <h1 class="text-5xl font-bold leading-none text-center">Something about me..</h1>
@@ -246,7 +269,8 @@ ul li.show div {
       </div>
   </section>
 
-  
+  <h1 class="text-5xl leading-none text-center text-white mt-10 mb-6">Resume</h1>
+
 <h1 class="text-2xl leading-none text-center text-white">Education</h1>
 <div>
   <ul>
@@ -266,6 +290,7 @@ ul li.show div {
         <p style="color: white;"><b><u>School:</u></b> Secondary school of electrotechnical engineering</p>
         <p style="color: white;"><b><u>Field of study:</u></b> Computer Systems</p>
         <p style="color: white;"><b><u>Location:</u></b> Prešov, Slovak Republic</p>
+        <p style="color: white;" class="pb-2"><b><u>Skills acquired:</u></b> C++, SQL, Arduino, Networking, Windows, Office</p>
       </div>
     </li> 
 </div>
@@ -312,7 +337,7 @@ ul li.show div {
           onto the external memory and displays it in
           graphic form on a progressive web application.
           Project analysis, creating technical
-          documentation, PWA development, creating Test
+          documentation, <abbr title="Progressive Web Application">PWA</abbr> development, creating Test
           Cases and project testing.</p>
           <br>
           <p style="color: white;" class="pb-2"><b><u>Skills acquired:</u></b></p>
@@ -324,6 +349,46 @@ ul li.show div {
 
     </li> 
 </div>
+<section class="tag-cloud text-center">
+  <header class="sidebar-header text-center">
+    <h1 class="text-2xl leading-none text-center mb-8 text-white">Skills</h1>
+  </header>
+  <div class="myrow text-center">
+    <div class="mycol text-center">
+      <span class="tag">
+        <i class="fab fa-python fa-xl mr-1" title="Python" ></i>
+        Python
+      </span>
+      <span class="tag">
+        C++</span>
+      <span class="tag">
+        <img src="https://img.icons8.com/windows/24/000000/selenium-test-automation.png" align="left" class="mr-1"/>
+        Selenium</span>
+        <span class="tag">
+          <i class="fa-solid fa-database fa-xl ml-1"></i>
+          SQL</span>
+      <span class="tag">
+        <i class="fa-brands fa-linux fa-xl ml-1" title="Linux"></i>
+        Linux</span>
+      <span class="tag">
+        <i class="fa-brands fa-git-alt fa-xl mr-1" title="GIT"></i>
+        GIT
+      </span>
+      <span class="tag">
+        <i class="fa-brands fa-jira fa-xl ml-1" title="Jira"></i>
+        Jira</span>
+      <span class="tag">
+        <i class="fa-brands fa-confluence fa-xl ml-1" title="Confluence"></i>
+        Confluence</span>
+        <span class="tag">
+        <i class="fa-brands fa-bitbucket fa-xl ml-1" title="Bitbucket"></i>
+        Bitbucket</span>
+        <span class="tag">
+          <i class="fa-brands fa-aws fa-xl ml-1" title="AWS"></i>
+          AWS</span>
+    </div>
+  </div>
+</section>
 
 
 </div>
