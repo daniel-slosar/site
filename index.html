@@ -16,6 +16,7 @@ body, html {
   font-family: 'IBM Plex Mono', monospace;
   font-family: 'Righteous', cursive;
   scroll-behavior: smooth;
+  background-color: black;
 
 }
 
@@ -215,13 +216,12 @@ TAG CLOUD
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center text-white">
             <a class="mr-5 hover:text-gray-500" href="#about" >ABOUT ME</a>
-            <a class="mr-5 hover:text-gray-500" href="#projects" >PROJECTS</a>
             <a class="mr-5 hover:text-gray-500" href="#certificates" >CERTIFICATES</a>
             <a class="mr-5 hover:text-gray-500" href="#resume" >RESUME</a>
+            <a class="mr-5 hover:text-gray-500" href="#resume" >SKILLS</a>
           </nav>
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 text-black">
             <a href="https://www.linkedin.com/in/daniel-slosar/">LinkedIn</a>
-            <!--style="background-color: red;background-image: linear-gradient(45deg, #C822FF, #1A6DFF);background-size: 100%;background-repeat: repeat;-webkit-background-clip: text;-webkit-text-fill-color: transparent;-moz-background-clip: text;-moz-text-fill-color: transparent;font-family: 'Righteous', cursive;"-->
           </button>
         </div>
       </header>
@@ -229,7 +229,6 @@ TAG CLOUD
 <div id="base"></div>
 
 <div class="parallax">
-    <!--<div class="centered">DANIEL ŠLOSÁR<p>Eager to learn and grow professionally</p></div>-->
     <div class="hero-text">
         <h1>DANIEL ŠLOSÁR</h1>
         <p style="letter-spacing:1px;font-size:20px" class="mb-6">Eager to learn and grow professionally</p>
@@ -237,7 +236,7 @@ TAG CLOUD
           <a class="text-gray-100 ml-3" href="https://www.linkedin.com/in/daniel-slosar/">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me">
+          <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me" title="danielslosar@proton.me">
             <i class="fas fa-envelope"></i>        
           </a>
           <a class="ml-3 text-gray-100" href="https://github.com/daniel-slosar">
@@ -249,8 +248,8 @@ TAG CLOUD
 </div>  
     
     
-<div style="height:3400px;background-color:black" id="about">
-    <section class="py-14 text-gray-100">
+
+    <section class="py-14 text-gray-100 bg-black">
         <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
             <h1 class="text-5xl font-bold leading-none text-center">Something about me..</h1>
             <p class="pt-2 text-xl font-medium text-center">I am a fast learner who enjoys learning new technical skills. My greatest passion in life is using my technical know-how to benefit other people.</p>
@@ -258,9 +257,9 @@ TAG CLOUD
     </section>
 
 
-    <section class="py-2 text-gray-100" id="certificates">
+    <section class="py-2 text-gray-100 bg-black" id="certificates">
       <div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
-        <h1 class="text-5xl leading-none text-center text-white mt-10 mb-6">Certificates</h1>
+        <h1 class="text-5xl leading-none text-center text-white mt-10 mb-4">Certificates</h1>
         <a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/J8GND8RZWK5E">
           <img src="certificate.png" alt="Paris" style="width:500px" class="thumb">
         </a>
@@ -269,13 +268,13 @@ TAG CLOUD
       </div>
   </section>
 
-  <h1 class="text-5xl leading-none text-center text-white mt-10 mb-6">Resume</h1>
+  <h1 class="text-5xl leading-none text-center text-white mb-10 bg-black">Resume</h1>
 
-<h1 class="text-2xl leading-none text-center text-white">Education</h1>
-<div>
+<h1 class="text-2xl leading-none text-center text-white bg-black">Education</h1>
+<section class="bg-black">
   <ul>
     <li>
-      <div class="bg-gray-600 text-xl">
+      <div class="text-xl" style="background-color: #282828">
         <time style="color: white;">2022 - Present</time>
         <img src="matfyz.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
         <p style="color: white;">Faculty of Mathematics, Physics and Informatics</p>
@@ -284,7 +283,7 @@ TAG CLOUD
       </div>
     </li>
     <li>
-      <div class="bg-gray-600 text-xl">
+      <div class="text-xl" style="background-color: #282828">
         <time style="color: white;">2018 - 2022</time>
         <img src="spse.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
         <p style="color: white;"><b><u>School:</u></b> Secondary school of electrotechnical engineering</p>
@@ -293,13 +292,13 @@ TAG CLOUD
         <p style="color: white;" class="pb-2"><b><u>Skills acquired:</u></b> C++, SQL, Arduino, Networking, Windows, Office</p>
       </div>
     </li> 
-</div>
+</section>
     
-<h1 class="text-2xl leading-none text-center text-white">Work Experience</h1>
-<div>
+<h1 class="text-2xl leading-none text-center text-white bg-black">Work Experience</h1>
+<section>
   <ul>
     <li>
-      <div class="bg-gray-600 text-xl">
+      <div class="text-xl" style="background-color: #282828">
         <time style="color: white;">July 2022 - Present</time>
         <img src="accenture.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
         <p style="color: white;"><b><u>Role:</u></b> IT Support Engineer</p>
@@ -309,7 +308,7 @@ TAG CLOUD
           resolution of inquiries and customer problems<br>
           • Creating scripting tools for automation tasks<br>
           • Helping team members deliver services
-          defined in OLA<br>
+          defined in <abbr title="Operational-Level Agreement">OLA</abbr><br>
           • Tracking and maintaining the asset inventory
           database<br>
           • Conducting periodic audits to ensure
@@ -326,7 +325,7 @@ TAG CLOUD
       </div>
     </li>
     <li>
-      <div class="bg-gray-600 text-xl">
+      <div class="text-xl" style="background-color: #282828">
         <img src="comap.jpg"class="w-14 h-14 rounded-full float-right" viewBox="0 0 24 24"></img>
         <time style="color: white;">October 2022 - May 2022</time>
         <p style="color: white;"><b><u>Role:</u></b> Analyst/Tester</p>
@@ -348,12 +347,13 @@ TAG CLOUD
       </div>
 
     </li> 
-</div>
-<section class="tag-cloud text-center">
+</section>
+
+<section class="tag-cloud text-center bg-black">
   <header class="sidebar-header text-center">
-    <h1 class="text-2xl leading-none text-center mb-8 text-white">Skills</h1>
+    <h1 class="text-2xl leading-none text-center mb-8 mt-8 text-white">Skills</h1>
   </header>
-  <div class="myrow text-center">
+  <div class="myrow text-center mb-20 bg-black">
     <div class="mycol text-center">
       <span class="tag">
         <i class="fab fa-python fa-xl mr-1" title="Python" ></i>
@@ -391,12 +391,53 @@ TAG CLOUD
 </section>
 
 
-</div>
+<section class="py-6 dark:bg-gray-800 dark:text-gray-50 text-white mb-10">
+  <h1 class="text-5xl leading-none text-center text-white mb-10 bg-black">Contact</h1>
+	<div class="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+    <div class="py-6 md:py-0 md:px-6">
+			<h1 class="text-4xl font-bold">Get in touch</h1>
+			<p class="pt-2 pb-4">Fill in the form to contact me!</p>
+			<div class="space-y-4">
+				<p class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+						<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+					</svg>
+					<span>Bratislava, Slovak Republic</span>
+				</p>
+				<p class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+						<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+					</svg>
+					<span>Phone number given on request</span>
+        </p>
+				<p class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+						<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+						<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+					</svg>
+					<span>danielslosar@proton.me</span>
+				</p>
+			</div>
+		</div>
 
+		<form novalidate="" class="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid" action="https://formspree.io/f/xvoyzwry" method="POST">
+			<label class="block">
+				<span class="mb-2">Full name</span>
+				<input type="text" class="block w-full rounded-md shadow-sm text-black">
+			</label>
+			<label class="block">
+				<span class="mb-2">Email address</span>
+				<input type="email" name="email" class="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-gray-800 text-black">
+			</label>
+			<label class="block">
+				<span class="mb-2">Message</span>
+				<textarea rows="3" name="message" class="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-gray-800 text-black"></textarea>
+			</label>
+			<button type="submit" class="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-white text-black">Submit</button>
+		</form>
+	</div>
+</section>
 
-
-
-<!--<div class="parallax"></div>-->
 
 <div id="ft" style="scroll-behavior: smooth;overflow-y: scroll;"></div>
 
@@ -410,10 +451,10 @@ TAG CLOUD
     </a>
     <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2022 Daniel Šlosár</p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start ">
-      <a class="text-gray-100 ml-3" href="https://www.linkedin.com/in/daniel-slosar/">
+      <a class="text-gray-100 ml-3" href="https://www.linkedin.com/in/daniel-slosar/" title="LinkedIn">
         <i class="fab fa-linkedin fa-2x"></i>
       </a>
-      <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me">
+      <a class="text-gray-100 ml-3" href="mailto: danielslosar@proton.me" title="danielslosar@proton.me">
         <i class="fas fa-envelope fa-2x"></i>        
       </a>
       <a class="ml-3 text-gray-100" href="https://github.com/daniel-slosar">
